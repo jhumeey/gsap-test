@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", () => {
     brand.addEventListener('click', () => {
       console.log('Navbar brand clicked');
       setTimeout(() => {
-        gsap.to('.my-element', {
+        gsap.to('.hero_heading', {
           rotation: 360,
           duration: 2,
           ease: 'bounce.out'
