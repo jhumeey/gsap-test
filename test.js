@@ -1,5 +1,8 @@
-gsap.to('.hero_heading', {
+window.addEventListener("DOMContentLoaded", () => {
+    gsap.to('.my-element', {
       rotation: 360,
       duration: 2,
-      ease: 'bounce.out'
+      ease: 'bounce.out',
+      delay: 10 // delay in seconds
     });
+  });
