@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", () => {
     const brand = document.querySelector('.navbar_brand');
 
+    console.log(brand)
     if (brand) {
       brand.addEventListener('click', () => {
         setTimeout(() => {
