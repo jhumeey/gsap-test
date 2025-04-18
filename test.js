@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
-  console.log('External JS is running'); // ✅ this should show
+  console.log('External JS is running joppp'); // ✅ this should show
 
   const brand = document.querySelector('.navbar_brand');
   console.log('Navbar brand:', brand);   // ✅ check if this logs null or the element
