@@ -5,7 +5,7 @@ let cont = document.querySelector(".section-footer");
   gsap.set(text, { opacity: 1 });
 
   let mySplitText = SplitText.create(text, {
-    type: "chars, words",
+    type: "chars",
     charsClass: "char"
   });
 
