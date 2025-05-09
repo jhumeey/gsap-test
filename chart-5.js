@@ -30,4 +30,6 @@ let cont = document.querySelector(".section-footer");
       text.removeAttribute("aria-hidden");
     }
   });
+ // ✅ Ensure layout + font metrics are accurate
+  ScrollTrigger.refresh();
 });
