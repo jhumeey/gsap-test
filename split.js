@@ -1,6 +1,7 @@
 gsap.registerPlugin(SplitText, ScrollTrigger);
 document.fonts.ready.then(() => {
   let text = document.querySelector(".footer_big-text");
+let cont = document.querySelector(".footer");
   gsap.set(text, { opacity: 1 });
 
   let mySplitText = SplitText.create(text, {
@@ -12,8 +13,8 @@ document.fonts.ready.then(() => {
 
   gsap.from(chars, {
     scrollTrigger: {
-      trigger: text,
-      start: "top 80%", // when top of text hits 80% of viewport
+      trigger: cont,
+      start: "top 20%", // when top of text hits 80% of viewport
       toggleActions: "play none none none", // or "play none none reverse" if you  want it to reverse
     },
     duration: 3,
