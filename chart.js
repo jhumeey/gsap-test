@@ -15,7 +15,7 @@ let cont = document.querySelector(".footer");
   gsap.from(chars, {
     scrollTrigger: {
       trigger: cont,
-      start: "top 20%", // when top of text hits 80% of viewport
+      start: "top 60%", // when top of text hits 80% of viewport
       toggleActions: "play none none none", // or "play none none reverse" if you  want it to reverse
     },
     duration: 3,
