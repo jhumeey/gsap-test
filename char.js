@@ -1,5 +1,6 @@
-gsap.registerPlugin(SplitText, ScrollTrigger);
+
 document.fonts.ready.then(() => {
+  gsap.registerPlugin(SplitText, ScrollTrigger);
   let text = document.querySelector(".footer_big-text");
 let cont = document.querySelector(".footer");
   gsap.set(text, { opacity: 1 });
