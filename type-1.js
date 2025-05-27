@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
           cursorChar: "_",
           speed: 50,
           waitUntilVisible: true,
+          afterComplete: () => {
+            isTyping = false;
+          }
         }).go();
       });
 
