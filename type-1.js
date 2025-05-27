@@ -1,25 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let currentInstance = null;
+    let currentInstance = null;
 
-  document.querySelectorAll(".work_column").forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      const text = card.querySelector(".typewriter-text")?.textContent.trim();
+    document.querySelectorAll(".work_column").forEach((card) => {
       const target = card.querySelector(".typewriter-target");
 
-      // Clear previous typing instance if any
-      if (currentInstance) {
-        currentInstance.destroy();
-      }
+      card.addEventListener("mouseenter", () => {
+        const text = card.querySelector(".typewriter-text")?.textContent.trim();
 
-      // Clear the target's content
-      target.innerHTML = "";
+        // Clear previous typing instance
+        if (currentInstance) {
+          currentInstance.destroy();
+        }
 
-      // Start typing in this card's target
-      currentInstance = new TypeIt(target, {
-        strings: [text],
-        speed: 50,
-        waitUntilVisible: true,
-      }).go();
+        target.innerHTML = ""; // Clear previous text
+
+        // Start typing in this card's target
+        currentInstance = new TypeIt(target, {
+          strings: [text],
+          cursorChar: "_",
+          speed: 50,
+          waitUntilVisible: true,
+        }).go();
+      });
+
+      card.addEventListener("mouseleave", () => {
+        if (currentInstance) {
+          currentInstance.destroy();
+          currentInstance = null;
+        }
+
+        // Remove the text when hovering out
+        target.innerHTML = "";
+      });
     });
   });
-});
