@@ -1,0 +1,21 @@
+.swiper {
+  width: 100%;
+  overflow: visible; 
+}
+
+.swiper-slide {
+  background: #f3f3f3;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 24px;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+  transform: translateY(0); /* Default */
+}
+
+/* 👇 Move the active slide down */
+.swiper-slide-active {
+  transform: translateY(95px);
+  z-index: 2;
+}
